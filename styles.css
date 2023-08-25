@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e026c1;
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+}
+
+#score {
+    margin-top: 20px;
+}
+
+#highScore {
+    margin-top: 10px;
+}
+
+#timer {
+    margin-top: 10px;
+}
+
+#startButton,
+#clickButton,
+#restartButton {
+    margin-top: 20px;
+}
+
+#startButton:disabled,
+#clickButton:disabled,
+#restartButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#topScores {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#scoreList {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+#scoreList li {
+    counter-increment: score-counter;
+}
+
+#scoreList li::before {
+    content: counter(score-counter) ".";
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Rest of your styles ... */
